@@ -51,6 +51,34 @@ Classes and functions (inside and outside) documentation:
 - `python3 -c 'print(__import__("my_module").my_function.__doc__)'`
 - `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`
 
+
+## vagrant
+
+> install virtualbox
+`sudo apt update`
+`sudo apt full-upgrade -y`
+`[ -f /var/run/reboot-required ] && sudo reboot -f`
+
+```bash
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- \
+| gpg --dearmor \
+  | sudo tee /usr/share/keyrings/virtualbox-archive-keyring.gpg
+```
+
+```bash
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox-archive-keyring.gpg] http://download.virtualbox.org/virtualbox/debian buster contrib" \
+  | sudo tee /etc/apt/sources.list.d/virtualbox.list
+```
+
+`sudo apt update`
+`sudo apt install -y dkms`
+`virtualbox`
+
+> install vagrant
+`curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
+`sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
+`sudo apt-get update && sudo apt-get install vagrant`
+
 ## Author
 <!-- twitter -->
 [![Twitter](https://img.shields.io/twitter/follow/ralex_uy?style=social)](https://twitter.com/ralex_uy) <!-- linkedin --> [![Linkedin](https://img.shields.io/badge/LinkedIn-+23K-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/ronald-rivero/) <!-- github --> [![Github](https://img.shields.io/github/followers/ralexrivero?style=social)](https://github.com/ralexrivero/) <!-- vagrant --> [![Vagrant](https://img.shields.io/static/v1?label=&message=Vagrant%20Profile&color=1868F2&logo=vagrant&labelColor=2F333A)](https://app.vagrantup.com/ralexrivero) <!-- docker --> [![Docker](https://img.shields.io/static/v1?label=&message=Docker%20Profile&color=2496ED&logo=Docker&labelColor=2F333A)](https://hub.docker.com/u/ralexrivero)
