@@ -51,7 +51,6 @@ Classes and functions (inside and outside) documentation:
 - `python3 -c 'print(__import__("my_module").my_function.__doc__)'`
 - `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`
 
-
 ## vagrant
 
 > install virtualbox
@@ -72,6 +71,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox-archive-keyring.g
 
 `sudo apt update`
 `sudo apt install -y dkms`
+`sudo apt install -y virtualbox virtualbox-ext-pack`
 `virtualbox`
 
 > install vagrant
