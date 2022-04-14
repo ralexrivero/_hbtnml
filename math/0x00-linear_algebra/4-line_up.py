@@ -2,6 +2,7 @@
 """ adds two arrays """
 res = []
 
+
 def add_arrays(arr1, arr2):
     """ add two arrays element-wise """
     if len(arr1) != len(arr2):
