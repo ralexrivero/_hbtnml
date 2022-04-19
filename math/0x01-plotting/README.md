@@ -31,9 +31,9 @@
 
 > Installing Matplotlib 3.3.4
 
-`pip install --user matplotlib==3.3.4`
-`pip install --user Pillow`
-`sudo apt-get install python3-tk`
+- `pip install --user matplotlib==3.3.4`
+- `pip install --user Pillow`
+- `sudo apt-get install python3-tk`
 
 > Configure X11 Forwarding
 
@@ -45,6 +45,15 @@ Vagrant.configure(2) do |config|
   config.ssh.forward_x11 = true
 end
 ```
+
+## plots
+
+![Line graph](img/0.png)
+![Scatter](img/1.png)
+![Change of scale](img/2.png)
+![Two is better than one](img/3.png)
+![Frequency](img/4.png)
+![All in One](img/5.png)
 
 ## Author
 <!-- twitter -->
