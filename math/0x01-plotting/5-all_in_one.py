@@ -26,42 +26,47 @@ np.random.seed(5)
 student_grades = np.random.normal(68, 15, 50)
 
 """ configure the subplots, rows and columns """
-figure, axis = plt.subplots(3, 2)
+plt0 = plt.subplot2grid((3, 2), (0, 0), rowspan=1, colspan=1)
+plt1 = plt.subplot2grid((3, 2), (0, 1), rowspan=1, colspan=1)
+plt2 = plt.subplot2grid((3, 2), (1, 0), rowspan=1, colspan=1)
+plt3 = plt.subplot2grid((3, 2), (1, 1), rowspan=1, colspan=1)
+plt4 = plt.subplot2grid((3, 2), (2, 0), rowspan=2, colspan=1)
+
 
 """ 0 """
 plt.title('All in One', size='x-small')
-axis[0, 0].plot(np.arange(0, 11), y0, 'r-')
+plt0.plot(np.arange(0, 11), y0, 'r-')
 
 """ 1 """
-axis[0, 1].scatter(x1, y1, color='m')
-axis[0, 1].set_title('Scatter Plot', size='x-small')
-axis[0, 1].set_xlabel('Height (in)', size='x-small')
-axis[0, 1].set_ylabel('Weight (lbs)', size='x-small')
-axis[0, 1].set_title("Men's Height vs Weight", size='x-small')
+plt1.scatter(x1, y1, color='m')
+plt1.set_title('Scatter Plot', size='x-small')
+plt1.set_xlabel('Height (in)', size='x-small')
+plt1.set_ylabel('Weight (lbs)', size='x-small')
+plt1.set_title("Men's Height vs Weight", size='x-small')
 
 """ 2 """
-axis[1, 0].plot(x2, y2)
-axis[1, 0].set_xlabel('Time (years)', size='x-small')
-axis[1, 0].set_ylabel('Fraction Remaining', size='x-small')
-axis[1, 0].set_title('Exponential Decay of C-14', size='x-small')
-axis[1, 0].set_yscale('log')
-axis[1, 0].set_xlim(0, 28650)
+plt2.plot(x2, y2)
+plt2.set_xlabel('Time (years)', size='x-small')
+plt2.set_ylabel('Fraction Remaining', size='x-small')
+plt2.set_title('Exponential Decay of C-14', size='x-small')
+plt2.set_yscale('log')
+plt2.set_xlim(0, 28650)
 
 """ 3 """
-axis[1, 1].plot(x3, y31, 'r--')
-axis[1, 1].plot(x3, y32, 'g-')
-axis[1, 1].set_xlabel('Time (years)', size='x-small')
-axis[1, 1].set_ylabel('Fraction Remaining', size='x-small')
-axis[1, 1].set_title('Exponential Decay of Radioactive Elements',
+plt3.plot(x3, y31, 'r--')
+plt3.plot(x3, y32, 'g-')
+plt3.set_xlabel('Time (years)', size='x-small')
+plt3.set_ylabel('Fraction Remaining', size='x-small')
+plt3.set_title('Exponential Decay of Radioactive Elements',
                      size='x-small')
-axis[1, 1].set_xlim(0, 20000)
-axis[1, 1].set_ylim(0, 1)
-axis[1, 1].legend(['C-14', 'Ra-226'])
+plt3.set_xlim(0, 20000)
+plt3.set_ylim(0, 1)
+plt3.legend(['C-14', 'Ra-226'])
 
 """ 4 """
-axis[2, 0].hist(student_grades, bins=10, color='k')
-axis[2, 0].set_xlabel('Grades', size='x-small')
-axis[2, 0].set_ylabel('Number of Students', size='x-small')
-axis[2, 0].set_title('Project A', size='x-small')
+plt4.hist(student_grades, bins=10, color='k')
+plt4.set_xlabel('Grades', size='x-small')
+plt4.set_ylabel('Number of Students', size='x-small')
+plt4.set_title('Project A', size='x-small')
 
 plt.show()
