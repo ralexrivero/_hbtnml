@@ -26,11 +26,11 @@ np.random.seed(5)
 student_grades = np.random.normal(68, 15, 50)
 
 """ configure the subplots, rows and columns """
-plt0 = plt.subplot2grid((3, 2), (0, 0), rowspan=1, colspan=1)
-plt1 = plt.subplot2grid((3, 2), (0, 1), rowspan=1, colspan=1)
-plt2 = plt.subplot2grid((3, 2), (1, 0), rowspan=1, colspan=1)
-plt3 = plt.subplot2grid((3, 2), (1, 1), rowspan=1, colspan=1)
-plt4 = plt.subplot2grid((3, 2), (2, 0), rowspan=2, colspan=1)
+plt0 = plt.subplot2grid((3, 2), (0, 0), rowspan=1)
+plt1 = plt.subplot2grid((3, 2), (0, 1), rowspan=1)
+plt2 = plt.subplot2grid((3, 2), (1, 0), rowspan=1)
+plt3 = plt.subplot2grid((3, 2), (1, 1), rowspan=1)
+plt4 = plt.subplot2grid((3, 2), (2, 0), colspan=2)
 
 
 """ 0 """
