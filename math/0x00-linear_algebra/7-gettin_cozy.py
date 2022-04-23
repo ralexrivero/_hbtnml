@@ -4,7 +4,11 @@
 
 def cat_matrices2D(mat1, mat2, axis=0):
     """ concatenates two matrices """
-    if axis == 0:
+    if (axis != 0 and axis != 1):
+        return None
+    elif (len(mat1) != len(mat2)):
+        return None
+    elif axis == 0:
         matCon = []
         for row in mat1:
             matCon.append(row.copy())
