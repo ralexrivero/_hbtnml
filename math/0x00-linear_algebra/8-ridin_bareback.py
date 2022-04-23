@@ -8,10 +8,6 @@ def mat_mul(mat1, mat2):
         return None
 
     res = []
-    """ for i in range(len(mat1)):
-        res.append([])
-        for j in range(len(mat2[0])):
-            res[i].append(0) """
 
     for i in range(len(mat1)):
         res.append([])
