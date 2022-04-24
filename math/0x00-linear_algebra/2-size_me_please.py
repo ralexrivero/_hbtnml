@@ -3,7 +3,7 @@
 
 
 def matrix_shape(matrix):
-    """ calculate the shap of a matrix """
+    """ calculate the shape of a matrix """
     shape = []
     while isinstance(matrix, list):
         shape.append(len(matrix))
