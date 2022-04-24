@@ -19,4 +19,4 @@ def cat_matrices(mat1, mat2, axis=0):
     if s1 != s2:
         return None
     else:
-        return np.concatenate((mat1, mat2), axis=axis)
+        return
