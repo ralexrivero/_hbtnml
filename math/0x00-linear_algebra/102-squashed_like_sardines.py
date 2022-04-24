@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ concatenate two matrices along a specific axis """
-import numpy as np
 
 
 def matrix_shape(matrix):
