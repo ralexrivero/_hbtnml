@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ add matrices """
 
+
 def matrix_shape(matrix):
     """ Shape size of a matrix """
     shape = []
@@ -21,4 +22,3 @@ def add_matrices(mat1, mat2):
     add = []
 
     return add
-
