@@ -22,7 +22,7 @@
 
 - π = 3.1415926536
 - e = 2.7182818285
-- [![er](/holbertonschool-machine_learning/math/0x03-probability/img/5e71204ca545072e8766.gif)]
+- ![er](/holbertonschool-machine_learning/math/0x03-probability/img/5e71204ca545072e8766.gif)
 ## Author
 
 <!-- twitter -->
