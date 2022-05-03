@@ -5,5 +5,8 @@ import numpy as np
 
 def np_slice(matrix, axes={}):
     """ slice a matrix """
-
-    return
+    for key, val in axes.items():
+        if key == 1:
+            return matrix[:, val[0]:val[1]]
+        elif key == 2:
+            return matrix[:, :, val[0]:val[1]:val[2]]
