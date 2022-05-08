@@ -12,6 +12,6 @@ plt.title('Project A')
 plt.xlim(0, 100)
 plt.ylim(0, 30)
 plt.locator_params('x', nbins=10)
-plt.hist(student_grades, bins=10, color='#228BC2',
+plt.hist(student_grades, color='#228BC2',
          edgecolor='k', range=(0, 100))
 plt.show()
