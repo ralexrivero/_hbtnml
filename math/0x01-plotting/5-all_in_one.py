@@ -72,7 +72,8 @@ plt4.set_title('Project A')
 plt4.set_xlim(0, 100)
 plt4.set_ylim(0, 30)
 plt4.locator_params('x', nbins=10)
-plt4.hist(student_grades, bins=10, color='#228BC2', edgecolor='k', range=(0, 100))
+plt4.hist(student_grades, bins=10, color='#228BC2',
+          edgecolor='k', range=(0, 100))
 
 """ pack and display plots """
 
