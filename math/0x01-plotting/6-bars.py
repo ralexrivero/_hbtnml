@@ -4,23 +4,22 @@ import matplotlib.pyplot as plt
 
 np.random.seed(5)
 fruit = np.random.randint(0, 20, (4,3))
-
-labels = ['Farrah', 'Fred', 'Felicia']
+people = ['Farrah', 'Fred', 'Felicia']
+prod = ['apples', 'bannanas', 'orange', 'peaches']
+color = ['r', 'k', '#ff8000', '#ffe5b4']
 width = 0.5
 
 fig, ax = plt.subplots()
 
-print(fig)
-print(ax)
-print(fruit)
-print(fruit[0])
+for f in fruit:
+    print(f)
 
-ax.bar(labels, fruit[0], width, label='apples', color='r')
-ax.bar(labels, fruit[1], width, label='bannanas', color='y')
-ax.bar(labels, fruit[2], width, label='orange', color='#ff8000')
-ax.bar(labels, fruit[3], width, label='peaches', color='#ffe5b4')
-
-plt.title('Number of Fruit per Person')
-plt.ylabel('Quantity of Fruit')
+p1 = ax.bar(people, fruit[0], width, label='apples', color='r')
+p2 = ax.bar(people, fruit[1], width, bottom=fruit[0], label='bannanas', color='yellow')
+p3 = ax.bar(people, fruit[2], width, bottom=fruit[0]+fruit[1], label='orange', color='#ff8000')
+p4 = ax.bar(people, fruit[3], width, bottom=fruit[0]+fruit[1]+fruit[2], label='peaches', color='#ffe5b4')
+ax.set_ylabel('Quantity of Fruit')
+ax.set_ylim(0, 80)
 ax.legend()
+
 plt.show()
