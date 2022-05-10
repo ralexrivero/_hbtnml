@@ -13,10 +13,11 @@ _, _, Vh = np.linalg.svd(norm_data)
 pca_data = np.matmul(norm_data, Vh[:3].T)
 
 fig = plt.figure()
-ax = fig.add_subplot(projection='3d')
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(pca_data[:, 0], pca_data[:, 1], pca_data[:, 2], c=labels,
+           cmap='plasma')
 
 plt.title('PCA of Iris Dataset')
 plt.xlabel('U1')
 plt.ylabel('U2')
-
 plt.show()
