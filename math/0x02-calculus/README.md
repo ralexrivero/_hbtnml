@@ -29,8 +29,9 @@
 
 ## Notation
 
-sigma notation:
-pi notation:
+sigma notation: &Sigma;
+
+pi notation: &Pi;
 
 ## Author
 <!-- twitter -->
