@@ -4,4 +4,13 @@
 
 def poly_derivative(poly):
     """ calculates the derivative of a polynomial """
-    return poly
+    if not isinstance(poly, list) or poly is None:
+        return None
+    if len(poly) == 1:
+        return [0]
+    deri = []
+
+    for i, coef in enumerate(poly):
+        if i > 0:
+            deri.append(coef * i)
+    return deri
