@@ -7,3 +7,9 @@ print(poly_derivative(poly))
 
 poly = []
 print(poly_derivative(poly))
+
+poly = [8]
+print(poly_derivative(poly))
+
+poly = 3
+print(poly_derivative(poly))
