@@ -6,9 +6,9 @@ def poly_derivative(poly):
     """ calculates the derivative of a polynomial """
     if not isinstance(poly, list) or poly is None:
         return None
-    deri = []
     if len(poly) < 2:
-        return deri
+        return None
+    deri = []
 
     for i, coef in enumerate(poly):
         if i > 0:
