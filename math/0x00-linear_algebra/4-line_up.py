@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 """ adds two arrays """
-res = []
+
+
+def shape(arr):
+    """ calculate the shape of a matrix """
+    shape = []
+
+    while isinstance(arr, list):
+        shape.append(len(arr))
+        arr = arr[0]
+    return shape
 
 
 def add_arrays(arr1, arr2):
     """ add two arrays element-wise """
-    if len(arr1) != len(arr2):
+    add = []
+    if shape(arr1) != shape(arr2):
         return None
-    for i in range(len(arr1)):
-        res.append(arr1[i] + arr2[i])
-    return res
+    for x in range(len(arr1)):
+        add.append(arr1[x] + arr2[x])
+    return add
