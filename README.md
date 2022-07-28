@@ -1,14 +1,11 @@
 # Math
 
 ```bash
-                                      88
-                                ,d    88
-                                88    88
-88,dPYba,,adPYba,  ,adPPYYba, MM88MMM 88,dPPYba,
-88P'   "88"    "8a ""     `Y8   88    88P'    "8a
-88      88      88 ,adPPPPP88   88    88       88
-88      88      88 88,    ,88   88,   88       88
-88      88      88 `"8bbdP"Y8   "Y888 88       88
+███    ███  █████  ████████ ██   ██ 
+████  ████ ██   ██    ██    ██   ██ 
+██ ████ ██ ███████    ██    ███████ 
+██  ██  ██ ██   ██    ██    ██   ██ 
+██      ██ ██   ██    ██    ██   ██ 
 ```
 
 ## Environment
@@ -33,13 +30,13 @@
 
 Installing numpy 1.19.2, scipy 1.6.2, and pycodestyle 2.6
 
-`pip install --user numpy==1.19.2`
-`pip install --user scipy==1.6.2`
-`pip install --user pycodestyle==2.6`
+- `pip install --user numpy==1.19.2`
+- `pip install --user scipy==1.6.2`
+- `pip install --user pycodestyle==2.6`
 
 check download
 
-`pip list`
+- `pip list`
 
 Modules and classes documentation:
 
@@ -54,9 +51,9 @@ Classes and functions (inside and outside) documentation:
 ## vagrant
 
 > install virtualbox
-`sudo apt update`
-`sudo apt full-upgrade -y`
-`[ -f /var/run/reboot-required ] && sudo reboot -f`
+- `sudo apt update`
+- `sudo apt full-upgrade -y`
+- `[ -f /var/run/reboot-required ] && sudo reboot -f`
 
 ```bash
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- \
@@ -69,15 +66,15 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox-archive-keyring.g
   | sudo tee /etc/apt/sources.list.d/virtualbox.list
 ```
 
-`sudo apt update`
-`sudo apt install -y dkms`
-`sudo apt install -y virtualbox virtualbox-ext-pack`
-`virtualbox`
+- `sudo apt update`
+- `sudo apt install -y dkms`
+- `sudo apt install -y virtualbox virtualbox-ext-pack`
+- `virtualbox`
 
 > install vagrant
-`curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
-`sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
-`sudo apt-get update && sudo apt-get install vagrant`
+- `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
+- `sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
+- `sudo apt-get update && sudo apt-get install vagrant`
 
 ## Author
 <!-- twitter -->
