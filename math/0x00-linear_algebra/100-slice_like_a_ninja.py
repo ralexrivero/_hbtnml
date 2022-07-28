@@ -6,7 +6,6 @@ import numpy as np
 def np_slice(matrix, axes={}):
     """ slice a matrix """
     for key, val in axes.items():
-        if key == 1:
-            return matrix[:, val[0]:val[1]]
-        elif key == 2:
-            return matrix[:, :, val[0]:val[1]:val[2]]
+        start = val[0]
+        end = val[1]
+        return matrix.take(range(start, end), key)
