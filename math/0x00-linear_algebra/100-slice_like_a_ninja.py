@@ -8,4 +8,4 @@ def np_slice(matrix, axes={}):
     for key, val in axes.items():
         start = val[0]
         end = val[1]
-        return matrix.take(range(start, end), key)
+        return np.array(matrix.take(range(start, end), key))
