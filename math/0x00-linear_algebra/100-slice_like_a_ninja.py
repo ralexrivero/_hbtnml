@@ -5,7 +5,9 @@ import numpy as np
 
 def np_slice(matrix, axes={}):
     """ slice a matrix """
+    sliced = []
+    obj = [slice(None)] * (max(axes) + 1)
     for key, val in axes.items():
-        start = val[0]
-        end = val[1]
-        return np.array(matrix.take(range(start, end), key))
+        obj[key] = slice(*val)
+    sliced = matrix[tuple(obj)]
+    return sliced
