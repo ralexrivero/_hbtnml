@@ -14,9 +14,10 @@ def matrix_shape(matrix):
 def cat_matrices(mat1, mat2, axis=0):
     """ concatenate two matrices along a specific axis """
     # size control
+    cated = []
     s1 = matrix_shape(mat1)
     s2 = matrix_shape(mat2)
     if s1 != s2:
         return None
     else:
-        return
+        return cated
