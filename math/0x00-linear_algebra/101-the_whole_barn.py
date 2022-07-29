@@ -13,12 +13,13 @@ def matrix_shape(matrix):
 
 def add_matrices(mat1, mat2):
     """ add two matrices """
-    # size control
+    # shape control
     s1 = matrix_shape(mat1)
     s2 = matrix_shape(mat2)
     if s1 != s2:
         return None
 
     add = []
+
 
     return add
