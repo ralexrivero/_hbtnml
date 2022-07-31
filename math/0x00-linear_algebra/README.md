@@ -11,6 +11,10 @@ MM88MMM 88,dPPYba,   ,adPPYba,    88,dPYba,,adPYba,  ,adPPYYba, MM88MMM 8b,dPPYb
   "Y888 88       88  `"Ybbd8"'    88      88      88 `"8bbdP"Y8   "Y888 88         88 8P'     `Y8
 ```
 
+## Environment
+
+ubuntu, bash, vscode, pycodestyle, git, github, vagrant, python, numpy, conda, jupyter notebook
+
 ## numpy arrays
 
 - `import numpy as np`
