@@ -19,9 +19,6 @@ def cat_matrices(mat1, mat2, axis=0):
     s2 = matrix_shape(mat2)
 
     ndim = len(s1)
-    print('shape: ', s1)
-    print('ndim: ', ndim)
-    print('axis: ', axis)
 
     if s1 != s2:  # control shape
         return None
@@ -70,13 +67,17 @@ def cat_matrices(mat1, mat2, axis=0):
                 cated[i].append(mat1[i] + mat2[i])
         elif axis == 2:
             for i in range(s1[0]):
+                cated.append([])
                 for j in range(s1[1]):
-                    cated.append([mat1[i][j] + mat2[i][j]])
+                    cated[i].append([])
+                    cated.append(mat1[i][j] + mat2[i][j])
         elif axis == 3:
             for i in range(s1[0]):
+                cated.append([])
                 for j in range(s1[1]):
+                    cated[i].append([])
                     for k in range(s1[2]):
-                        cated.append(mat1[i][j][k] + mat2[i][j][k])
+                        cated[i][j].append(mat1[i][j][k] + mat2[i][j][k])
         else:
             return
     else:
