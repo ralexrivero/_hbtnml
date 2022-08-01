@@ -19,6 +19,9 @@ def cat_matrices(mat1, mat2, axis=0):
     s2 = matrix_shape(mat2)
 
     ndim = len(s1)
+    print('shape: ', s1)
+    print('ndim: ', ndim)
+    print('axis: ', axis)
 
     if s1 != s2:  # control shape
         return None
@@ -37,8 +40,7 @@ def cat_matrices(mat1, mat2, axis=0):
                 cated.append(row2)
         elif axis == 1:
             for i in range(s1[0]):
-                cated.append([])
-                cated[i].append(mat1[i] + mat2[i])
+                cated.append(mat1[i] + mat2[i])
         else:
             return None
     elif ndim == 3:  # 3D Array
@@ -49,7 +51,6 @@ def cat_matrices(mat1, mat2, axis=0):
                 cated.append(row2)
         elif axis == 1:
             for i in range(s1[0]):
-                cated.append([])
                 cated[i].append(mat1[i] + mat2[i])
         elif axis == 2:
             for i in range(s1[0]):
@@ -74,9 +75,8 @@ def cat_matrices(mat1, mat2, axis=0):
         elif axis == 3:
             for i in range(s1[0]):
                 for j in range(s1[1]):
-                    cated.append([])
                     for k in range(s1[2]):
-                        cated[i].append([mat1[i][j][k] + mat2[i][j][k]])
+                        cated.append(mat1[i][j][k] + mat2[i][j][k])
         else:
             return
     else:
