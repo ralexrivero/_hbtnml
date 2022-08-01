@@ -51,8 +51,10 @@ def cat_matrices(mat1, mat2, axis=0):
                 cated[i].append(mat1[i] + mat2[i])
         elif axis == 2:
             for i in range(s1[0]):
+                cated.append([])
                 for j in range(s1[1]):
-                    cated.append([mat1[i][j] + mat2[i][j]])
+                    cated[i].append([])
+                    cated[i][j].append(mat1[i][j] + mat2[i][j])
         else:
             return
     elif ndim == 4:  # 4D Array
@@ -69,8 +71,7 @@ def cat_matrices(mat1, mat2, axis=0):
             for i in range(s1[0]):
                 cated.append([])
                 for j in range(s1[1]):
-                    cated[i].append([])
-                    cated.append(mat1[i][j] + mat2[i][j])
+                    cated[i].append(mat1[i][j] + mat2[i][j])
         elif axis == 3:
             for i in range(s1[0]):
                 cated.append([])
