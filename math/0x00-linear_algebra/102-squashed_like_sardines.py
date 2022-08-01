@@ -65,8 +65,7 @@ def cat_matrices(mat1, mat2, axis=0):
                 cated.append(row2)
         elif axis == 1:
             for i in range(s1[0]):
-                cated.append([])
-                cated[i].append(mat1[i] + mat2[i])
+                cated.append(mat1[i] + mat2[i])
         elif axis == 2:
             for i in range(s1[0]):
                 cated.append([])
