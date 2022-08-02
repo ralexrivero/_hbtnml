@@ -11,9 +11,6 @@ width = 0.5
 
 fig, ax = plt.subplots()
 
-for f in fruit:
-    print(f)
-
 p1 = ax.bar(people, fruit[0], width, label='apples', color='r')
 p2 = ax.bar(people, fruit[1], width, bottom=fruit[0],
             label='bannanas', color='yellow')
