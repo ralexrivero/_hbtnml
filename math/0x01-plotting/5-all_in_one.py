@@ -40,8 +40,8 @@ plt.rcParams.update({'axes.labelsize': 'x-small'})
 plt.title('All in One')
 plt0.plot(np.arange(0, 11), y0, 'r-')
 
-""" 1 """
-plt1.scatter(x1, y1, color='m')
+""" 1 scatter """
+plt1.scatter(x1, y1, color='m', s=2)
 plt1.set_title('Scatter Plot')
 plt1.set_xlabel('Height (in)')
 plt1.set_ylabel('Weight (lbs)')
