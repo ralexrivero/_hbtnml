@@ -46,6 +46,10 @@ Vagrant.configure(2) do |config|
 end
 ```
 
+## notebook
+
+[Jupyter notebook](./0x01-plotting.ipynb)
+
 ## plots
 
 ![Line graph](./img/0.png)
