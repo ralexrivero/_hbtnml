@@ -3,7 +3,7 @@
 
 
 def summation_i_squared(n):
-    """ calculates summation of squared """
+    """ calculates summation of squared recursively """
     if not isinstance(n, (int, float)) or n <= 0:
         return None  # check the valid number
 
