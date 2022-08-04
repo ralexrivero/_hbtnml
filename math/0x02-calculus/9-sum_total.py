@@ -4,7 +4,7 @@
 
 def summation_i_squared(n):
     """ calculates summation of squared """
-    if not isinstance(n, (int, float)) or n < 0:
+    if not isinstance(n, (int, float)) or n <= 0:
         return None  # check the valid number
 
     if n == 1:
