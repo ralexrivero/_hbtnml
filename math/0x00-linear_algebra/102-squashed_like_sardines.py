@@ -16,7 +16,6 @@ def matrix_shape(matrix):
 
 def cat_matrices(mat1, mat2, axis=0):
     """ concatenate two matrices along a specific axis """
-    # size control
     cated = []
 
     if type(mat1) is not type(mat2) or type(mat1) is not list:
