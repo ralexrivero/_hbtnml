@@ -3,7 +3,10 @@
 
 
 def matrix_shape(matrix):
-    """ Shape size of a matrix """
+    """
+        Shape size of a matrix
+        All elements in the same dimension are of the same type/shape
+    """
     shape = []
     while isinstance(matrix, list):
         shape.append(len(matrix))
@@ -32,9 +35,9 @@ def cat_matrices(mat1, mat2, axis=0):
     elif ndim == 2:  # 2D Array
         if axis == 0:
             for row1 in mat1:
-                cated.append(row1)
+                cated.append(row1.copy())
             for row2 in mat2:
-                cated.append(row2)
+                cated.append(row2.copy())
         elif axis == 1:
             for i in range(s1[0]):
                 cated.append(mat1[i] + mat2[i])
@@ -43,9 +46,9 @@ def cat_matrices(mat1, mat2, axis=0):
     elif ndim == 3:  # 3D Array
         if axis == 0:
             for row1 in mat1:
-                cated.append(row1)
+                cated.append(row1.copy)
             for row2 in mat2:
-                cated.append(row2)
+                cated.append(row2.copy)
         elif axis == 1:
             for i in range(s1[0]):
                 cated[i].append(mat1[i] + mat2[i])
@@ -60,9 +63,9 @@ def cat_matrices(mat1, mat2, axis=0):
     elif ndim == 4:  # 4D Array
         if axis == 0:
             for row1 in mat1:
-                cated.append(row1)
+                cated.append(row1.copy)
             for row2 in mat2:
-                cated.append(row2)
+                cated.append(row2.copy)
         elif axis == 1:
             for i in range(s1[0]):
                 cated.append(mat1[i] + mat2[i])
