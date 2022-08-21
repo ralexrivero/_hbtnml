@@ -23,7 +23,7 @@ def cat_matrices(mat1, mat2, axis=0):
 
     ndim = len(s1)
 
-    if s1 != s2:  # control shape
+    if len(s1) != len(s2):  # control shape
         return None
     elif ndim <= axis:  # control axis on dimension
         return None
