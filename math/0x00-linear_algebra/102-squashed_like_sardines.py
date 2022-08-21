@@ -18,72 +18,21 @@ def cat_matrices(mat1, mat2, axis=0):
     """ concatenate two matrices along a specific axis """
     # size control
     cated = []
-    s1 = matrix_shape(mat1)
-    s2 = matrix_shape(mat2)
 
-    ndim = len(s1)
-
-    if len(s1) != len(s2):  # control shape
+    if type(mat1) is not type(mat2) or type(mat1) is not list:
         return None
-    elif ndim <= axis:  # control axis on dimension
-        return None
-    elif ndim == 1:  # 1D Array
-        if axis == 0:
-            cated = mat1 + mat2
-        else:
+    if axis == 0:
+        s1 = matrix_shape(mat1)
+        s2 = matrix_shape(mat2)
+        if len(s1) != len(s2) or (len(s1) > 0 and s1[1:] != s2[1:]):
             return None
-    elif ndim == 2:  # 2D Array
-        if axis == 0:
-            for row1 in mat1:
-                cated.append(row1.copy())
-            for row2 in mat2:
-                cated.append(row2.copy())
-        elif axis == 1:
-            for i in range(s1[0]):
-                cated.append(mat1[i] + mat2[i])
-        else:
-            return None
-    elif ndim == 3:  # 3D Array
-        if axis == 0:
-            for row1 in mat1:
-                cated.append(row1.copy)
-            for row2 in mat2:
-                cated.append(row2.copy)
-        elif axis == 1:
-            for i in range(s1[0]):
-                cated[i].append(mat1[i] + mat2[i])
-        elif axis == 2:
-            for i in range(s1[0]):
-                cated.append([])
-                for j in range(s1[1]):
-                    cated[i].append([])
-                    cated[i][j].append(mat1[i][j] + mat2[i][j])
-        else:
-            return
-    elif ndim == 4:  # 4D Array
-        if axis == 0:
-            for row1 in mat1:
-                cated.append(row1.copy)
-            for row2 in mat2:
-                cated.append(row2.copy)
-        elif axis == 1:
-            for i in range(s1[0]):
-                cated.append(mat1[i] + mat2[i])
-        elif axis == 2:
-            for i in range(s1[0]):
-                cated.append([])
-                for j in range(s1[1]):
-                    cated[i].append(mat1[i][j] + mat2[i][j])
-        elif axis == 3:
-            for i in range(s1[0]):
-                cated.append([])
-                for j in range(s1[1]):
-                    cated[i].append([])
-                    for k in range(s1[2]):
-                        cated[i][j].append(mat1[i][j][k] + mat2[i][j][k])
-        else:
-            return
+        cated = mat1 + mat2
     else:
-        return cated  # Not handled more than 4 dimensional arrays
-
+        if len(mat1) != len(mat2):
+            return None
+        for i in range(len(mat1)):
+            row = cat_matrices(mat1[i], mat2[i], axis=(axis - 1))
+            if row is None:
+                return None
+            cated.append(row)
     return cated
