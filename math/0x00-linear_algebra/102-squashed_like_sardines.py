@@ -24,7 +24,7 @@ def cat_matrices(mat1, mat2, axis=0):
     if axis == 0:
         s1 = matrix_shape(mat1)
         s2 = matrix_shape(mat2)
-        if len(s1) != len(s2) or (len(s1) > 0 and s1[1:] != s2[1:]):
+        if len(s1) != len(s2):
             return None
         cated = mat1 + mat2
     else:
