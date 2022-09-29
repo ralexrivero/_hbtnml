@@ -24,6 +24,10 @@
 - e = 2.7182818285
 - ![er](img/5e71204ca545072e8766.gif)
 
+## Poisson Distribution
+
+- The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time and/or space if these events occur with a known constant rate and independently of the time since the last event. The Poisson distribution can also be used for the number of events in other specified intervals such as distance, area or volume. The occurrence of events are independent from each other.
+
 ## Author
 
 <!-- twitter -->
